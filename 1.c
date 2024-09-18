@@ -4,7 +4,11 @@ int main()
 {
 	int NofM;
 	printf("Input a number of the month:\n");
-	scanf("%d", &NofM);
+
+	if(scanf("%d", &NofM) != 1){
+		printf("You entered a wrong number of the month!\n");
+		return 1;
+	};
 
 	switch(NofM)
 	{
