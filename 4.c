@@ -5,10 +5,19 @@ int main()
 {
     int M;
     int D;
-    int DofY;
+    int DofY = 0;
 
-    printf("Enter the month number and day number:\n");
-    scanf("%d %d", &M, &D);
+    printf("Enter the month number:\n");
+    if(scanf("%d", &M) != 1 || M < 1 || M > 12){
+        printf("Entered a wrong number of the month!");
+        return 1;
+    }
+
+    printf("Enter the day number:\n");
+    if(scanf("%d", &D) != 1 || D < 1 || D > 31){
+        printf("Entered a wrong number of the day!");
+        return 1;
+    }
 
     switch(M){
         case 1: //January
