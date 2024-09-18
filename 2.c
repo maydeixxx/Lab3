@@ -5,7 +5,10 @@ int main()
     int n;
 
     printf("Enter an integer from -9 to 9:\n");
-    scanf("%d", &n);
+    if(scanf("%d", &n) != 1){
+        printf("You entered a wrong int!\n");
+        return 1;
+    };
     
 
     if(n >= -9 && n <= 9){
