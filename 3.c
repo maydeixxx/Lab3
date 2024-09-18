@@ -2,12 +2,15 @@
 
 int main()
 {
-    int pet;
+    int animal;
     printf("Enter the year from 2008 to 2019:\n");
 
-    scanf("%d", &pet);
+    if(scanf("%d", &animal) != 1){
+        printf("You entered a wrong year!\n");
+        return 1;
+    };
 
-    switch(pet){
+    switch(animal){
         case 2008:
             printf("You've entered the year of the rat\n");
             break;
