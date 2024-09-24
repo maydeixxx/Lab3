@@ -3,7 +3,8 @@
 int main()
 {
     printf("enter an int in range 9 / -9:\n");
-    scan: int n;
+    
+    ch: int n;
     scanf("%d", &n);
     
     if(n < 0 && n >= -9){
@@ -40,8 +41,8 @@ int main()
             printf("nine");
             break;
         default:
-            printf("entered a wrong int\n");
-            goto scan;
+            printf("entered a wrong int\ntry again:\n");
+            goto ch;
         }
     return 0;
 }
